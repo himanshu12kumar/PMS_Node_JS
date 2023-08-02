@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"></head>
+  <body>
+    <h1><%= title %></h1>
+    <div>
+      <h4>Signup Form</h4>
+      <% if(msg!='') { %>
+        <p style="text-align: center;"><%= msg %></p>
+        <% } %>
+      <form action="/signup" method="POST">
+        <h3>Username</h3>
+        <input type="text" name="name" id="username" placeholder="Enter username here" required>
+        <h3>Email Id</h3>
+        <input type="email" name="email" id="emp_email" placeholder="Enter email here" required>
+        <h3>Password</h3>
+        <input type="password" name="pass" id="password" placeholder="Enter password here" required>
+        <h3>Confirm Password</h3>
+        <input type="password" name="Cpass" id="Cpassword" placeholder="Re-enter password here" required>
+        <input type="submit" name="submit" value="Signup" id="submit_btn">
+        <p>Already have account<a href="/">Login Here</a></p>
+      </form>
+    </div>
+  </body>
+</html>

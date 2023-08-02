@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default" style="width: 100%;">
+    <div class="container-fluid" style="display: flex; flex-direction: row;">
+        <div class="navbar-header" style="width: 30%;">
+            <a class="navbar-brand" href="#">Password management system</a>
+        </div>
+        <ul class="nav navbar-nav" style="display: flex; flex-direction: row; justify-content: space-between; width: 60%;">
+            <li ><a href="/dashboard">Home</a></li>
+            <li><a href="#">Password Category</a>
+                <ul>
+                    <li><a href="/add-new-category">Add category</a></li>
+                    <li><a href="/passwordCategory">View all category</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Password Details</a>
+                <ul>
+                    <li><a href="/add-new-password">Add new password</a></li>
+                    <li><a href="/view-all-password">View all password</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div>
+            <% if(loggedUserName!='' && loggedUserId!='') { %>
+                <p>User Name: <%= loggedUserName %></p>
+                <p>User Email: <%= loggedUserId %></p>
+                <a href="/signout">Signout</a>
+            <% } %>    
+        </div>
+    </div>
+</nav>

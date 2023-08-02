@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <%- include('header') %>
+    <div>
+      <h4>Add New Password Category</h4>
+      <% if(error!='') { %>
+        <p style="color: red;"><%= error.passwordcategory.msg  %></p>
+        <% } %>
+
+        <% if(success!='') { %>
+          <p style="color: red;"><%= success  %></p>
+          <% } %>
+      <form action="/add-new-category" method="POST">
+        <h3>Category Name</h3>
+        <input type="text" name="passwordcategory" id="username" placeholder="Enter your password category name">
+        <input type="submit" name="submit" value="AddCategory" id="submit_btn">
+        <p><a href="/passwordCategory">View all category Lists</a></p>
+      </form>
+    </div>
+    <%- include('footer') %>
+  </body>
+</html>

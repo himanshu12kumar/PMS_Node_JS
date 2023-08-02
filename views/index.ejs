@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <div>
+      <h4>Login Form</h4>
+      <%  if(msg!='') { %>
+        <p> <%= msg  %> </p>
+        <% } %>
+      <form action="" method="POST">
+        <h3>Email Id</h3>
+        <input type="email" name="email" id="emp_email" placeholder="Enter username here">
+        <h3>Password</h3>
+        <input type="password" name="pass" id="password" placeholder="Enter password here">
+        <input type="submit" name="submit" value="LOGIN" id="submit_btn">
+        <p>If you don't have account<a href="/signup">create new account</a></p>
+      </form>
+    </div>
+  </body>
+</html>
